@@ -9,7 +9,7 @@ const Navbar = () => {
   const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
 
   return (
-    <div style={{ padding: "10px", background: "#eee" }}>
+    <div style={{ padding: "10px", background: "#f2f2f2" }}>
       🛒 Cart Items: <b>{totalItems}</b>
     </div>
   );

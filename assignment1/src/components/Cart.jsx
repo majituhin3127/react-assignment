@@ -17,14 +17,23 @@ const Cart = () => {
 
       {cart.map(item => (
         <div key={item.id}>
-          {item.name} - ₹{item.price} x {item.qty}
-          <button onClick={() => dispatch({ type: "INCREASE_QTY", payload: item.id })}>+</button>
-          <button onClick={() => dispatch({ type: "DECREASE_QTY", payload: item.id })}>-</button>
-          <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: item.id })}>Remove</button>
+          {item.name} - ₹{item.price} × {item.qty}
+
+          <button onClick={() => dispatch({ type: "INCREASE_QTY", payload: item.id })}>
+            +
+          </button>
+
+          <button onClick={() => dispatch({ type: "DECREASE_QTY", payload: item.id })}>
+            -
+          </button>
+
+          <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: item.id })}>
+            Remove
+          </button>
         </div>
       ))}
 
-      <h4>Total: ₹{totalPrice}</h4>
+      <h4>Total Price: ₹{totalPrice}</h4>
     </div>
   );
 };
